@@ -26,7 +26,7 @@ O Catálogo de Jogos é uma aplicação simples que permite aos usuários adicio
 
 ## Exemplo de Uso
 
-![Exemplo de Uso](./src/video_uso.mov)
+![Exemplo de Uso](./src/video_uso.gif)
 
 ## Contribuição
 
