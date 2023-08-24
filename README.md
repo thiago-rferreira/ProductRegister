@@ -2,44 +2,59 @@
 
 ![Exemplo de Uso](./src/screenshot.png)
 
-O Catálogo de Jogos é uma aplicação simples que permite aos usuários adicionar informações sobre jogos, como título, preço, descrição, plataforma e URL da imagem. Os jogos adicionados são exibidos em uma lista na página.
+# Projeto de Lista de Jogos
 
-## Funcionalidades
+Este é um projeto simples para criar e exibir uma lista de jogos em uma página da web. Ele usa JavaScript para adicionar jogos à lista e exibi-los na página. Abaixo estão os detalhes sobre como o projeto funciona e como você pode usá-lo.
 
-- Adicionar informações sobre jogos, incluindo título, preço, descrição, plataforma e URL da imagem.
-- Validar campos de entrada para garantir que todos os campos estejam preenchidos e que a URL da imagem seja válida.
-- Exibir os jogos adicionados em um formato de cartão na página.
+## Como Funciona
 
-## Tecnologias Utilizadas
+O projeto consiste em duas classes principais e algumas funções JavaScript auxiliares:
 
-- JavaScript
-- HTML
-- CSS
+### Classe Game
+
+A classe Game representa um jogo com as seguintes propriedades:
+
+- **titulo**: O título do jogo.
+- **preco**: O preço do jogo.
+- **descricao**: Uma breve descrição do jogo.
+- **plataforma**: A plataforma em que o jogo está disponível.
+- **imagem**: Uma URL para a imagem do jogo.
+
+### Classe GamesList
+
+A classe GamesList é responsável por manter uma lista de jogos e possui os seguintes métodos:
+
+- `adicionarJogo(titulo, preco, descricao, plataforma, imagem)`: Adiciona um novo jogo à lista, desde que todos os campos obrigatórios estejam preenchidos e a URL da imagem seja válida.
+
+### Funções JavaScript
+
+Existem várias funções JavaScript definidas para lidar com a interação com a página web, incluindo:
+
+- `exibirJogos()`: Atualiza a página para exibir todos os jogos na lista.
+- `adicionarJogo()`: Obtém os valores dos campos de entrada do usuário e usa o método adicionarJogo da classe GamesList para adicionar um novo jogo.
+- `isURLValida(url)`: Verifica se uma URL é válida para uma imagem (com base na extensão do arquivo).
+- `clearInputs()`: Limpa os campos de entrada após adicionar um jogo.
+- `sendMSG(msg, type)`: Exibe uma mensagem na página (por exemplo, sucesso ou erro) por um curto período de tempo.
+- `isAnyInputEmpty()`: Verifica se algum campo de entrada obrigatório está vazio.
 
 ## Como Usar
 
-1. Abra o arquivo `index.html` em seu navegador.
-2. Preencha os campos com informações sobre o jogo que você deseja adicionar.
-3. Certifique-se de que todos os campos estejam preenchidos e que a URL da imagem seja válida.
-4. Clique no botão "Adicionar Jogo" para adicionar o jogo à lista.
-5. Os jogos adicionados serão exibidos na página em formato de cartão.
+Para usar este projeto em sua própria página da web, siga estas etapas:
 
-## Exemplo de Uso
+1. Crie uma página HTML com os campos de entrada necessários, como título, preço, descrição, plataforma e URL da imagem. Certifique-se de incluir uma área onde os jogos serão exibidos, por exemplo, `<div id="gameList"></div>`.
 
-![Exemplo de Uso](./src/video_uso.gif)
+2. Inclua o código JavaScript fornecido no seu arquivo HTML. Certifique-se de que ele esteja incluído após a definição dos elementos HTML e que as funções sejam chamadas nos eventos apropriados (por exemplo, ao clicar em um botão "Adicionar Jogo").
 
-## Contribuição
+3. Crie uma instância da classe GamesList usando `const gamesList = new GamesList();`.
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um problema ou enviar um pedido de pull request para melhorar este projeto.
+4. Personalize o código conforme necessário para a aparência e comportamento desejados da sua página.
 
-## Licença
+5. Teste o projeto em um navegador para adicionar e exibir jogos.
 
-Este projeto está sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
+Lembre-se de que este é um projeto simples e pode ser expandido e aprimorado de várias maneiras, como adicionar recursos de edição e exclusão de jogos ou persistência de dados em um servidor.
 
-## Autor
+## Contribuições
 
-Thiago Ferreira
+Este projeto é de código aberto e as contribuições são bem-vindas. Se você encontrar problemas ou tiver ideias para melhorias, sinta-se à vontade para criar problemas (issues) ou enviar pull requests no repositório do projeto.
 
----
-
-Este é um projeto simples de catálogo de jogos que pode ser usado como ponto de partida para aplicações mais complexas. Sinta-se à vontade para personalizá-lo e expandi-lo de acordo com suas necessidades.
+Espero que este projeto seja útil e que você possa usá-lo como ponto de partida para criar sua própria lista de jogos online!
