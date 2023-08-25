@@ -1,0 +1,102 @@
+<!--
+    Primeira etapa vai ser iniciar uma estrutura
+    de html padrao, temos o atalho ! tab, e html:5 tab.
+-->
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        Proxima etapa é fazer os links do css e js. E verificar
+        se o link do JS está linkado.
+    -->
+    <script src="./assets/js/script.index.js"></script>
+    <link rel="stylesheet" href="./assets/css/styles.index.css">
+</head>
+<body>
+    <!--
+        Apos linkar, verifique se o JS está ok.
+        Como?
+        console.log("") no JS.
+    -->
+    <!--
+        Apos o OK, e avaliacao da pagina demandada.
+        Começamos a nossa estrutura html do body.
+    -->
+
+    <!--
+        // Primeiro passo vai ser criar uma div, pois identificamos que 
+        é preciso de um div controle/pai. Essa div geralmente é chamada
+        de container. Ela precisará de um id ou class.
+    -->
+    <div id="conteiner-principal">
+        <!--
+            Dentro dessa div, identificamos um h1/h2 e 5 inputs com labels 
+            e 1 botão.
+            Entao iremos criar as tags.
+        -->
+        <!--
+            Criaremos o h2, que possui uma class ou id e seu texto/valor.
+        -->
+        <h2 id="titulo-principal">
+            <!--
+                Aqui dentro do h2, entre as tags, colocamos o valor desse h2.
+            -->
+            Cadastrar Jogos
+        </h2>
+
+         <!--
+            Separar os inputs e labels e o botao, em apenas um bloco/div que 
+            seja só deles, ela precisará de um id ou class.
+        -->
+        <div id="conteiner-inputs">
+            <!--
+                Criar os inputs com suas respectivas labels, a label contem
+                for(name/id do input dela) e seu texto.
+                O input contem id, name, class(todos sempre do mesmo nome), e seu type (tipo).
+            -->
+            <label for="input-titulo">Titulo</label>
+            <input type="text" id="input-titulo" name="input-titulo" class="inputs"/>
+            
+            <label for="input-preco">Preço</label>
+            <input type="number" id="input-preco" name="input-preco" class="inputs"/>
+           
+            <label for="input-descricao">Descrição</label>
+            <input type="text" id="input-descricao" name="input-descricao" class="inputs"/>
+            
+            <label for="input-plataforma">Plataforma</label>
+            <input type="text" id="input-plataforma" name="input-plataforma" class="inputs"/>
+            
+            <label for="input-imgLink">Link da imagem</label>
+            <input type="text" id="input-imgLink" name="input-imgLink" class="inputs"/>
+
+            <!--
+                Teremos um mensagem, entao precisamos de uma div vazia com id para
+                depois alterar pelo JS.
+            -->
+
+            <div id="msg">Teste</div>
+
+            <!--
+                Criar o botao, que possui: id, class, onclick(resposavel pela acao)
+                e o seu texto
+            -->
+            <button id="botao-CriarJogo" class="button" onclick="comporJogo()">Cadastrar Jogo</button>
+
+            <!--
+                Finalizamos a primeira parte do hmtl, e identificamos que
+                precisamos de uma acao, que é cadastrar jogos.
+                Entao iremos para o JS.
+            -->
+        </div>  
+    </div>
+
+    <div id="conteiner-lista">
+
+    </div>
+</body>
+</html>
